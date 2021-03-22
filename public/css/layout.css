@@ -1,0 +1,29 @@
+.aside {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background-color: #111;
+}
+
+.header {
+    background: #1abc9c;
+    margin-left: 160px;
+    min-height: 80px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-left: 160px;
+    background: #61dafb;
+}
+
+.content {
+    margin-left: 160px;
+}
