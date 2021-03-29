@@ -1,18 +1,22 @@
+:root {
+    --aside-width: 120px
+}
+
 .aside {
     height: 100%;
-    width: 160px;
+    width: var(--aside-width);
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     overflow-x: hidden;
-    background-color: #111;
+    border-right: #c8c8c8 solid 1px;
 }
 
 .header {
-    background: #1abc9c;
-    margin-left: 160px;
-    min-height: 80px;
+    margin-left: var(--aside-width);
+    height: 70px;
+    border-bottom: #c8c8c8 solid 1px;
 }
 
 .footer {
@@ -20,10 +24,10 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    margin-left: 160px;
-    background: #61dafb;
+    margin-left: var(--aside-width);
+    border-top: #c8c8c8 solid 1px;
 }
 
 .content {
-    margin-left: 160px;
+    margin-left: var(--aside-width);
 }

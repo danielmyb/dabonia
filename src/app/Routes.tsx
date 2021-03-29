@@ -13,6 +13,7 @@ const Routes = () => {
       <Route path="/c2" component={Content2} />
       <Route path="/login" component={Login} />
       <Route path="/logout" component={Login} />
+      <Route path="/" component={MainPage} />
     </Switch>
   );
 };

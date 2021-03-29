@@ -46,22 +46,24 @@ class Login extends PureComponent<LoginProps, LoginState> {
   };
 
   render() {
+    const { t } = this.props;
+
     return (
       <div className="m-4">
         <Form>
           <Table>
             <tbody>
               <tr>
-                <td className="w-50 text-right">
-                  <span className="mr-2">LOGIN</span>
+                <td className="w-50 text-right align-middle">
+                  <span className="mr-2">{t("login")}</span>
                 </td>
                 <td>
                   <input className="form-text" type="text" onChange={e => this.onChange(e, "username")} />
                 </td>
               </tr>
               <tr>
-                <td className="w-50 text-right">
-                  <span className="mr-2">PASSWORD</span>
+                <td className="w-50 text-right align-middle">
+                  <span className="mr-2">{t("password")}</span>
                 </td>
                 <td>
                   <input className="form-text" type="password" onChange={e => this.onChange(e, "password")} />
@@ -70,7 +72,7 @@ class Login extends PureComponent<LoginProps, LoginState> {
             </tbody>
           </Table>
           <button className="btn btn-primary" onClick={e => this.submitLogin(e)}>
-            SUBMIT
+            {t("submitLogin")}
           </button>
         </Form>
       </div>
@@ -78,4 +80,4 @@ class Login extends PureComponent<LoginProps, LoginState> {
   }
 }
 
-export default withTranslation("")(Login);
+export default withTranslation("login")(Login);

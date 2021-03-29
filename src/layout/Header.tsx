@@ -5,7 +5,13 @@ interface HeaderProps extends WithTranslation {}
 
 class Header extends Component<HeaderProps, {}> {
   render() {
-    return <div className="header">HEADER</div>;
+    return (
+      <div className="header">
+        <div className="h-100 text-right">
+          <span className="m-4 font-weight-bold h2 align-middle">dabonia</span>
+        </div>
+      </div>
+    );
   }
 }
 
