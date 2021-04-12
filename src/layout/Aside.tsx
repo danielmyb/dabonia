@@ -26,16 +26,56 @@ class Aside extends Component<AsideProps, {}> {
         </div>
         <nav className="mt-5">
           <ul className="list-unstyled">
-            <li className="nav-item">{t("news")}</li>
+            <li className="nav-item">
+              <Link to="/news" className="nav-link">
+                <span>
+                  <img
+                    className="menu-icon"
+                    alt="news"
+                    src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_07.jpg"
+                  />
+                </span>
+              </Link>
+            </li>
           </ul>
           <ul className="list-unstyled">
-            <li className="nav-item">AFFIXES</li>
+            <li className="nav-item">
+              <Link to="/affixes" className="nav-link">
+                <span>
+                  <img
+                    className="menu-icon"
+                    alt="affixes"
+                    src="https://wow.zamimg.com/images/wow/icons/large/inv_relics_hourglass.jpg"
+                  />
+                </span>
+              </Link>
+            </li>
           </ul>
           <ul className="list-unstyled">
-            <li className="nav-item">TOPICS</li>
+            <li className="nav-item">
+              <Link to="/topics" className="nav-link">
+                <span>
+                  <img
+                    className="menu-icon"
+                    alt="affixes"
+                    src="https://wow.zamimg.com/images/wow/icons/large/achievement_faction_lorewalkers.jpg"
+                  />
+                </span>
+              </Link>
+            </li>
           </ul>
           <ul className="list-unstyled">
-            <li className="nav-item">CHARACTERS</li>
+            <li className="nav-item">
+              <Link to="/characters" className="nav-link">
+                <span>
+                  <img
+                    className="menu-icon"
+                    alt="affixes"
+                    src="https://wow.zamimg.com/images/wow/icons/large/spell_holy_prayerofspirit.jpg"
+                  />
+                </span>
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
