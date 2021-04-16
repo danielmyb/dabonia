@@ -8,5 +8,14 @@ function getDb() {
   return mongoDb;
 }
 
+const anon_user = authService.anon_getUser();
+const anon_mongoClient = anon_user?.mongoClient("mongodb-atlas");
+const anon_mongoDb = anon_mongoClient?.db(process.env.REACT_APP_DATABASE!);
+
+async function getAnonDb() {
+  await authService.anon_login();
+  return anon_mongoDb;
+}
+
 // eslint-disable-next-line import/no-anonymous-default-export
-export default { getDb };
+export default { getAnonDb, getDb };

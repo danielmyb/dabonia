@@ -1,7 +1,12 @@
 :root {
-    --aside-width: 120px
+    --aside-width: 120px;
+    --main-color: #282c34;
+    --text-main: white;
 }
 
+.app {
+    color: var(--text-main);
+}
 .aside {
     height: 100%;
     width: var(--aside-width);
@@ -11,12 +16,14 @@
     left: 0;
     overflow-x: hidden;
     border-right: #c8c8c8 solid 1px;
+    background: var(--main-color);
 }
 
 .header {
     margin-left: var(--aside-width);
     height: 70px;
     border-bottom: #c8c8c8 solid 1px;
+    background: var(--main-color);
 }
 
 .footer {
@@ -26,8 +33,11 @@
     width: 100%;
     margin-left: var(--aside-width);
     border-top: #c8c8c8 solid 1px;
+    background: var(--main-color);
 }
 
 .content {
     margin-left: var(--aside-width);
+    background: var(--main-color);
+    overflow-y: hidden;
 }

@@ -10,7 +10,7 @@ interface LayoutProps extends WithTranslation {}
 class Layout extends Component<LayoutProps, {}> {
   render() {
     return (
-      <div>
+      <div className="app">
         <Aside />
         <Header />
         <Content />
