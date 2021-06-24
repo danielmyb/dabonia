@@ -3,6 +3,7 @@ import { withTranslation, WithTranslation } from "react-i18next";
 import { NewsDocument } from "../model/news.types";
 import dbNewsService from "../database/dbNewsService";
 import dbUserdataService from "../database/dbUserdataService";
+import SplashScreen from "./general/Splashscreen";
 
 interface MainPageProps extends WithTranslation {}
 
@@ -30,6 +31,9 @@ class MainPage extends PureComponent<MainPageProps, MainPageState> {
   render() {
     const { t } = this.props;
     const { news } = this.state;
+    if (!news) {
+      return <SplashScreen />;
+    }
     return (
       <div>
         {news &&

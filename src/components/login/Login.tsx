@@ -18,7 +18,8 @@ class Login extends PureComponent<LoginProps, LoginState> {
   }
 
   async componentDidMount() {
-    if (authService.getUser()) {
+    const user = authService.getUser();
+    if (user && user.providerType === "local-userpass") {
       await authService.logout();
       window.location.href = "/login";
     }
@@ -55,7 +56,7 @@ class Login extends PureComponent<LoginProps, LoginState> {
             <tbody>
               <tr>
                 <td className="w-50 text-right align-middle">
-                  <span className="mr-2">{t("login")}</span>
+                  <span className="mr-2 text-white">{t("login")}</span>
                 </td>
                 <td>
                   <input className="form-text" type="text" onChange={e => this.onChange(e, "username")} />
@@ -63,7 +64,7 @@ class Login extends PureComponent<LoginProps, LoginState> {
               </tr>
               <tr>
                 <td className="w-50 text-right align-middle">
-                  <span className="mr-2">{t("password")}</span>
+                  <span className="mr-2 text-white">{t("password")}</span>
                 </td>
                 <td>
                   <input className="form-text" type="password" onChange={e => this.onChange(e, "password")} />

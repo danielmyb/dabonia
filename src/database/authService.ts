@@ -16,7 +16,8 @@ async function anon_login() {
 }
 
 function anon_getUser() {
-  return anon_app.currentUser;
+  const user = getUser();
+  return user ? user : anon_app.currentUser;
 }
 
 function anon_isLoggedIn() {

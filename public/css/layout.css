@@ -41,3 +41,7 @@
     background: var(--main-color);
     overflow-y: hidden;
 }
+
+html, body {
+    background: var(--main-color);
+}
